@@ -87,7 +87,7 @@ int main()
 					for (int z = 0; z < 8; ++z)
 					{
 
-						sum += pow(descriptor.SIFT_DescVec[k].discriptor[i*4  + j*4  + z] - descriptor2.SIFT_DescVec[l].discriptor[i * 4 + j *4  + z], 2);
+						sum += pow(descriptor.SIFT_DescVec[k*16+i*4+j].discriptor[z] - descriptor2.SIFT_DescVec[l*16+i*4+j].discriptor[z], 2);
 
 					}
 				}
